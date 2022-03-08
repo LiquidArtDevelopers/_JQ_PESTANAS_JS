@@ -71,6 +71,9 @@
     <!--  -->
     <div class="contenedor">
         <div id ="pest" class="caja_pestanas"></div>
+        <!--  <div id="tab01" class="tab" onclick="tabular('1')">Tab 01</div>
+            <div id="tab02" class="tab" onclick="tabular('2')">Tab 02</div>
+            <div id="tab03" class="tab" onclick="tabular('3')">Tab 03</div> -->
         <div  id ="text" class="caja_texto"></div>
     </div>
 </body>
@@ -109,6 +112,48 @@
             return;
         }
     });
+
+
+    //OPCIÓN CON JQ
+    /* $(function(){
+            $("#tab01").click(function(){
+                $("#tab01").css({'background-color': 'rgb(172, 85, 253)'});
+                $("#tab02").css({'background-color': 'rgb(210, 161, 255)'});
+                $("#tab03").css({'background-color': 'rgb(210, 161, 255)'});
+                $("#text01").css({'display':'block'});
+                $("#text02").css({'display':'none'});
+                $("#text03").css({'display':'none'});
+            });
+            $("#tab02").click(function(){
+                $("#tab02").css({'background-color': 'rgb(172, 85, 253)'});
+                $("#tab01").css({'background-color': 'rgb(210, 161, 255)'});
+                $("#tab03").css({'background-color': 'rgb(210, 161, 255)'});
+                $("#text02").css({'display':'block'});
+                $("#text01").css({'display':'none'});
+                $("#text03").css({'display':'none'});
+            });
+            $("#tab03").click(function(){
+                $("#tab03").css({'background-color': 'rgb(172, 85, 253)'});
+                $("#tab02").css({'background-color': 'rgb(210, 161, 255)'});
+                $("#tab01").css({'background-color': 'rgb(210, 161, 255)'});
+                $("#text03").css({'display':'block'});
+                $("#text02").css({'display':'none'});
+                $("#text01").css({'display':'none'});
+            });
+        }); */
+    
+    /* function tabular(num){
+            for (const item of document.querySelectorAll('.conttext')) {
+                item.style.display='none';
+            }
+            for (const item of document.querySelectorAll('.tab')) {
+                item.style.backgroundColor = 'rgb(210, 161, 255)';
+            }
+            document.getElementById("text0"+num).style.display = 'block'
+            document.getElementById("tab0"+num).style.backgroundColor = 'rgb(172, 85, 253)'
+
+            console.log(document.getElementsByClassName('conttext'));
+        } */
 
 
 </script>
