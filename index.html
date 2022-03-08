@@ -69,7 +69,6 @@
 </head>
 
 <body>
-    <!--  -->
     <div class="contenedor">
         <div id ="pest" class="caja_pestanas"></div>
         <div  id ="text" class="caja_texto"></div>
@@ -81,7 +80,7 @@
     //variables
     let pest = "";
     let texto = "";
-    let numPest = 7
+    let numPest = 5;
     let lorem = "<br><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur omnis dolorem hic doloremque asperiores iste voluptatum totam voluptatem, reprehenderit itaque nostrum id placeat sequi libero quo. Nisi, laborum fuga.</p>"
 
     //iteramos sobre la variable y creamos el HTML tanto de pestañas como de textos
@@ -92,8 +91,13 @@
     document.querySelector("#pest").innerHTML=pest;
     document.querySelector("#text").innerHTML=texto;
    
+
+
     //escuchamos para saber qué pestaña está seleccionada
     document.body.addEventListener("click", function (event) {
+        console.log(event.target);
+
+        //en caso de que se haya clickado sobre un elemento con clase "pestana"
         if (event.target.classList.contains("pestana")) {
 
             //iteramos y borramos las clases de selección
